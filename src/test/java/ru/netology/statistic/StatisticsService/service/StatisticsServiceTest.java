@@ -15,4 +15,15 @@ public class StatisticsServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    void FindMaxAllBranch() {
+        StatisticsService service = new StatisticsService();
+
+        long[] incomesInBillions = {12, 13, 14, 15, 16, 17, 18, 19, 25, 23, 20};
+        long expected = 25;
+
+        long actual = service.findMax(incomesInBillions);
+
+        Assertions.assertEquals(expected,actual);
+    }
     }
